@@ -1,0 +1,164 @@
+:root {
+    --nav-height: 50px;
+    --nav-color: #2c4251;
+    --pita-green: #b6c649;
+    --pita-orange: #ff7417;
+    --pita-silver: #c1c1c1;
+}
+
+body, html {
+	background-color: var(--nav-color);
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	overflow: auto;
+}
+
+#pita-tag {
+	position: absolute;
+	top: 0;
+	transform: translate(92px, 10px);
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+/* NAVBAR */
+#pita-nav {
+	font-family: sans-serif;
+	position: absolute;
+	left: 0; top: 0; right: 0;
+	height: var(--nav-height);
+}
+
+#pita-nav .navbar-inner {
+	height: 100%;
+	background-color: var(--nav-color) !important;
+}
+
+	#pita-nav .navbar-inner .logo {
+		position: absolute;
+		margin: 0;
+		top: 40%;
+	}
+
+	#pita-nav .navbar-inner ul {
+		height: 100%;
+		margin: 0;
+	}
+
+	#pita-nav .navbar-inner li {
+		padding: 0;
+		height: 100%;
+	}
+
+	#pita-nav .navbar-inner ul.navbar-nav {
+		margin-left: 99px;
+	}
+
+	#pita-nav .navbar-inner ul.navbar-nav li.dropdown {
+		padding-right: 0;
+	}
+
+	#pita-nav .navbar-inner ul li a {
+		box-sizing: border-box;
+		padding: 0 50px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		font-weight: 100;
+		font-size: 13px;
+		text-shadow: none;
+	}
+
+	#pita-nav .navbar-inner ul.navbar-nav li a {
+		padding-top: 5px;
+		border-bottom: 5px solid rgba(0, 0, 0, 0);
+	}
+
+	#pita-nav .navbar-inner ul.navbar-nav li.active a {
+		border-bottom: 5px solid var(--pita-green);
+	}
+
+	#pita-nav .navbar-inner ul.navbar-nav li a:hover {
+		background-color: rgba(0, 0, 0, 0);
+		border-bottom: 5px solid var(--pita-orange);
+	}
+
+/* NAVBAR DROPDOWN */
+#pita-nav .top_bar_dropdown_wrapper {
+	position: absolute;
+	top: var(--nav-height);
+	left: 0;
+	background-color: grey;
+}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes {
+		overflow-y: auto;
+		height: 300px;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li {
+		padding: 0 20px;
+		box-sizing: border-box;
+		border-bottom: 1px solid black;
+		height: 50px;
+		cursor: pointer;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li:hover::before {
+		position: absolute;
+		border-left: 5px solid var(--pita-orange);
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li div.main {
+		display: inline-block;
+		max-width: 80%;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li span.course_number::after {
+		content: ": ";
+		margin-right: 5px;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li .global_notifications.my_classes {
+		float: right;
+	}
+
+#pita-page {
+	position: absolute;
+    top: var(--nav-height) !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#pita-page .main_panel {
+	position: absolute;
+	left: 0; top: 0; right: 0; bottom: 0;
+}
+
+#pita-page #views #page_center {
+
+}
+
+#pita-page #views #feed .dashboard_toolbar.page_feed_tool_bar{
+	
+}
+
+#pita-page #views #page_center #history_slider {
+
+}
+
+
+ul.nav.clearfix.pull-right.dark_nav.top_bar_careers_homescreen {
+	display: none !important;
+}
+
+#popular_tags_bar {
+	display: none !important;
+}
