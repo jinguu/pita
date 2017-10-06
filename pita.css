@@ -23,7 +23,6 @@ body {
 	top: 0;
 	transform: translate(92px, 10px);
 	font-weight: 100;
-	letter-spacing: 1px;
 }
 
 /* NAVBAR */
@@ -65,8 +64,9 @@ body {
 
 	#pita-nav .navbar-inner ul li a {
 		box-sizing: border-box;
-		padding: 0 50px;
+		padding: 0 40px;
 		height: 100%;
+		text-align: center;
 		display: flex;
 		align-items: center;
 		font-weight: 100;
@@ -93,30 +93,72 @@ body {
 	position: absolute;
 	top: var(--nav-height);
 	left: 0;
-	background-color: grey;
+	background-color: #3f3f3f;
 }
+
+	#pita-nav .top_bar_dropdown_wrapper ul li:hover, 
+	#pita-nav .top_bar_dropdown_wrapper .top_bar_dropdown_actions_wrapper:hover {
+		background-color: #4f4f4f;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #inactive_network_toggle,
+	#pita-nav .top_bar_dropdown_wrapper .top_bar_dropdown_actions_wrapper {
+		transition: 0.2s ease-in-out;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #inactive_network_toggle li a,
+	#pita-nav .top_bar_dropdown_wrapper .top_bar_dropdown_actions_wrapper a {
+		color: var(--pita-orange) !important;
+		display: block;
+		font-weight: 100;
+		padding: 10px 0 !important;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #inactive_network_toggle li a:hover,
+	#pita-nav .top_bar_dropdown_wrapper .top_bar_dropdown_actions_wrapper a:hover {
+		text-decoration: none;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #inactive_network_toggle:hover,
+	#pita-nav .top_bar_dropdown_wrapper .top_bar_dropdown_actions_wrapper:hover {
+		border-left: 5px solid var(--pita-green);
+	}
 
 	#pita-nav .top_bar_dropdown_wrapper #my_classes {
 		overflow-y: auto;
-		height: 300px;
+		max-height: 400px;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #inactive_network_toggle li a {
+		padding: 0;
 	}
 
 	#pita-nav .top_bar_dropdown_wrapper #my_classes li {
-		padding: 0 20px;
 		box-sizing: border-box;
-		border-bottom: 1px solid black;
-		height: 50px;
+		height: auto;
+		width: 487px;
 		cursor: pointer;
+		transition: 0.2s ease-in-out;
+		padding: 0 20px;
+		border-left: 5px  var(--nav-color);
 	}
 
-	#pita-nav .top_bar_dropdown_wrapper #my_classes li:hover::before {
-		position: absolute;
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li:hover {
 		border-left: 5px solid var(--pita-orange);
 	}
 
 	#pita-nav .top_bar_dropdown_wrapper #my_classes li div.main {
 		display: inline-block;
-		max-width: 80%;
+		max-width: 91%;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		padding: 15px 0;
+		font-weight: 100;
+	}
+
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li span.course_number {
+		color: var(--pita-green);
 	}
 
 	#pita-nav .top_bar_dropdown_wrapper #my_classes li span.course_number::after {
@@ -124,8 +166,13 @@ body {
 		margin-right: 5px;
 	}
 
-	#pita-nav .top_bar_dropdown_wrapper #my_classes li .global_notifications.my_classes {
+	#pita-nav .top_bar_dropdown_wrapper #my_classes li div.global_notifications {
 		float: right;
+		padding: 2px 7px;
+		margin-top: 12px;
+		color: white;
+		background-color: var(--pita-orange);
+		border-radius: 50%;
 	}
 
 #pita-page {
