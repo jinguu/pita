@@ -38,7 +38,9 @@ const Pita = (function() {
 
 	function _preprocessPage() {
 		const page = _addMainElement(SECTION.PAGE, PIAZZA_MAP.PAGE);
+		console.log(page.classList); 
 		page.classList.remove('has_popular_tags_bar');
+		console.log(page.classList);
 	}
 
 	function _preprocessLoad() {
